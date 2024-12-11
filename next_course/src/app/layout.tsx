@@ -1,3 +1,6 @@
+import Navbar from "../components/Navbar";
+import "../styles/tailwind.css";
+
 // app/layout.tsx
 export const metadata = {
   title: "I Comming NextJS",
@@ -11,7 +14,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <div>
+          <div className=" border-2 border-purple-700">
+            <Navbar />
+          </div>
+          <div>{children}</div>
+        </div>
+      </body>
     </html>
   );
 }
